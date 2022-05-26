@@ -1,26 +1,24 @@
-package jp;
-
 import java.util.Scanner;
 
-public class Main {
+public class jp {
 
-	public static float sum(int a, int b) {
-		int sum = a + b;
+	public static float sum(float n1, float n2) {
+		float sum = n1 + n2;
 		return sum;
 	}
 
-	public static float sub(int a, int b) {
-		int sub = a - b;
+	public static float sub(float a, float b) {
+		float sub = a - b;
 		return sub;
 	}
 
-	public static float div(int a, int b) {
-		int div = a / b;
+	public static float div(float a, float b) {
+		float div = a / b;
 		return div;
 	}
 
-	public static float multi(int a, int b) {
-		int multi = a * b;
+	public static float multi(float a, float b) {
+		float multi = a * b;
 		return multi;
 	}
 
@@ -28,22 +26,36 @@ public class Main {
 		Scanner leitor = new Scanner(System.in);
 		System.out.println("Digite  o Operador:");
 		String operador = leitor.next();
-		System.out.println("Digite  o Primeiro número:");
-		int n1 = leitor.nextInt();
-		System.out.println("Digite  o Segundo número:");
-		int n2 = leitor.nextInt();
 		if (operador.equals("+")) {
+			System.out.println("Digite  o Primeiro número:");
+			float n1 = leitor.nextFloat();
+			System.out.println("Digite  o Segundo número:");
+			float n2 = leitor.nextFloat();
 			float result = sum(n1, n2);
 			System.out.printf("A soma é igual a %.2f.", result);
 		} else if (operador.equals("-")) {
+			System.out.println("Digite  o Primeiro número:");
+			float n1 = leitor.nextFloat();
+			System.out.println("Digite  o Segundo número:");
+			float n2 = leitor.nextFloat();
 			float result = sub(n1, n2);
 			System.out.printf("A Subtração é igual a %.2f.", result);
 		} else if (operador.equals("/")) {
+			System.out.println("Digite  o Primeiro número:");
+			float n1 = leitor.nextFloat();
+			System.out.println("Digite  o Segundo número:");
+			float n2 = leitor.nextFloat();
 			float result = div(n1, n2);
-			System.out.printf("A divisão é igual a %.2f.", result);
+			System.out.printf("A divisão é igual a %.4f.", result);
 		} else if (operador.equals("*")) {
+			System.out.println("Digite  o Primeiro número:");
+			float n1 = leitor.nextFloat();
+			System.out.println("Digite  o Segundo número:");
+			float n2 = leitor.nextFloat();
 			float result = multi(n1, n2);
 			System.out.printf("A multiplicação é igual a %.2f.", result);
+		} else {
+			System.out.println("Operador inexiste nessa calculadora! Tente outra vez.");
 		}
 	}
 
